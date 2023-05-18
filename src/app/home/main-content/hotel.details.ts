@@ -1,15 +1,6 @@
+import { HotelDetail } from './interface'
 
-
-
-
-const hotelDetails : {
-  id: number;
-  name: string;
-  location: string;
-  description: string;
-  photo_url: string;
-  price: number;
-}[] = [
+export const myhotelDetails : HotelDetail[] = [
   {
   id: 1,
   name: "Illustrious Veil Motel",

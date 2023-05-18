@@ -1,15 +1,17 @@
 
 .header {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 4em;
   background-color: rgb(27, 26, 26);
   color: white;
+  z-index: 2;
 }
 
 .hotel-title {
-  margin-left: 1em;
+  margin-left: 2.6em;
 }
 
 .nav {

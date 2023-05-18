@@ -1,0 +1,58 @@
+
+.main-content-container {
+  margin: 0 auto;
+  padding: 1em 4em;
+}
+
+
+.hotel-card-container{
+  margin: 0;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-areas: 
+  "image"
+  "name"
+  "location"
+  "price"
+  "description";
+  justify-items: center;
+  align-items: center;
+  gap: 1em ; 
+  padding: 1em;
+}
+
+
+.card {
+  margin: 0;
+  box-shadow: 0 0 10px 1px rgb(226, 236, 235);
+  width: 300px;
+  height: 400px;
+  padding: 1em;
+}
+
+.card-img-container {
+  width: 100%;
+}
+
+.name {
+  grid-area: name;
+}
+
+.image {
+  grid-area: image;
+  max-width: 100%;
+  /* height: 200px; */
+}
+
+.location{
+  grid-area: location;
+}
+
+.price{
+  grid-area: price;
+}
+
+.description{
+  grid-area: description;
+}
+

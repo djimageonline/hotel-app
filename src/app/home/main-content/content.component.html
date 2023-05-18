@@ -1,0 +1,15 @@
+<div class="main-content-container">
+  <h2 class="recommendation">Recommendation Hotel stays for you</h2>
+  <div class="hotel-card-container">
+    <div *ngFor="let hotelDetail of hotelDetails" class="card" id="card">
+      <div class="card-img-container" id="card-img">
+        <img class="image" [src]="hotelDetail.photo_url"></div>
+      <div class="card-content" id="card-content">
+        <h4 class="name">{{hotelDetail.name}}</h4>
+        <p class="location">{{hotelDetail.location}}</p>
+        <p class="price">{{hotelDetail.price}}</p>
+        <p class="description">{{hotelDetail.description}}</p>
+      </div>
+    </div>
+  </div>
+</div> 
