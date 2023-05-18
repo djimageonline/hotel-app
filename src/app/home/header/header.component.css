@@ -4,6 +4,8 @@
   align-items: center;
   justify-content: space-between;
   height: 4em;
+  background-color: rgb(27, 26, 26);
+  color: white;
 }
 
 .hotel-title {
@@ -20,6 +22,7 @@
 
 .nav li a {
   text-decoration: none;
+  color: white;
 }
 
 
