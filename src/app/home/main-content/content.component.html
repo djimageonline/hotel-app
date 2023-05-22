@@ -1,14 +1,40 @@
 <div class="main-content-container">
+  <div class="hotel-benefit">
+
+    <div class="hotel-benefit-section">
+      <fa-icon [icon]="faUtensils" class="icon"></fa-icon>
+      <p>Dining</p>
+      <p class="hotel-benefit-paragraph">Choose from 4 restaurants that include Italian, Spanish, American, & Asian Cuisine</p>
+      <button>Restaurants</button>
+    </div>
+
+    <div class="hotel-benefit-section">
+      <fa-icon [icon]="faFish" class="icon"></fa-icon>
+      <p>Entertainment</p>
+      <p class="hotel-benefit-paragraph">Weekly live entertainment, Sports games, Local Shopping </p>
+      <button>Discover</button>
+    </div>
+
+
+    <div class="hotel-benefit-section">
+      <fa-icon [icon]="faDumbbell" class="icon"></fa-icon>
+      <p>Amenities</p>
+      <p class="hotel-benefit-paragraph">Wi-fi, gym, 2 adult pools & 1 family pool, daycare, parking </p>
+      <button>Read More</button>
+    </div>
+  </div>
+
   <h2 class="recommendation">Recommendation hotel stays for you</h2>
   <div class="hotel-card-container">
     <div *ngFor="let hotelDetail of hotelDetails" class="card" id="card">
       <div class="card-img-container" id="card-img">
         <img class="image" [src]="hotelDetail.photo_url"></div>
       <div class="card-content" id="card-content">
+
         <h4 class="name">{{hotelDetail.name}}</h4>
         <p class="location">{{hotelDetail.location}}</p>
-        <p class="price">${{hotelDetail.price}}</p>
-        <p class="description">{{hotelDetail.description}}</p>
+        <p class="price">from ${{hotelDetail.price}}/night</p>
+        <!-- <p class="description">{{hotelDetail.description}}</p> -->
       </div>
     </div>
   </div>
