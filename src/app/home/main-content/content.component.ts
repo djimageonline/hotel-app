@@ -1,8 +1,9 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener } from '@angular/core';
 import { myhotelDetails } from './hotel.details'
 import { faUtensils } from '@fortawesome/free-solid-svg-icons';
 import { faFish } from '@fortawesome/free-solid-svg-icons';
 import { faDumbbell } from '@fortawesome/free-solid-svg-icons';
+
 
 
 @Component({
@@ -17,4 +18,25 @@ export class ContentComponent {
   faUtensils = faUtensils;
   faFish = faFish;
   faDumbbell = faDumbbell;
+
+  constructor(private elementRef: ElementRef) {}
+
+  @HostListener('document:click', ['$event'])
+  handleClick(event: Event): void {
+    const target = event.target as HTMLElement; 
+    const hotelId = target.dataset['id']
+    console.log(hotelId)
+
+     let targethotelObj = myhotelDetails.filter(function (hotel) {
+      return hotel.id === Number(hotelId);
+    })[0];
+    console.log(targethotelObj);
+
+  }
+
+
+  
+
+
+
 } 

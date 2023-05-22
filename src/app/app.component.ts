@@ -6,6 +6,7 @@ import { Component } from '@angular/core';
   template: `
   <hotel-hero></hotel-hero>
   <hotel-content ></hotel-content>
+  <hotel-footer></hotel-footer>
   `,
   styleUrls: ['./app.component.css'],
 })

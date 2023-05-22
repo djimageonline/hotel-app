@@ -25,15 +25,22 @@
   </div>
 
   <h2 class="recommendation">Recommendation hotel stays for you</h2>
+
+  <date-range-picker-forms></date-range-picker-forms>
+
   <div class="hotel-card-container">
     <div *ngFor="let hotelDetail of hotelDetails" class="card" id="card">
       <div class="card-img-container" id="card-img">
-        <img class="image" [src]="hotelDetail.photo_url"></div>
+        <img class="image" [src]="hotelDetail.photo_url" [attr.data-id]="hotelDetail.id" ></div>
       <div class="card-content" id="card-content">
 
         <h4 class="name">{{hotelDetail.name}}</h4>
         <p class="location">{{hotelDetail.location}}</p>
-        <p class="price">from ${{hotelDetail.price}}/night</p>
+        <div class="price-book">
+          <p class="price">from ${{hotelDetail.price}}/night</p>
+          <button class="price-book-btn" [attr.data-id]="hotelDetail.id">Book</button>
+        </div>
+        
         <!-- <p class="description">{{hotelDetail.description}}</p> -->
       </div>
     </div>
