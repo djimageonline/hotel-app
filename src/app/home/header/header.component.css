@@ -10,16 +10,23 @@
   z-index: 2;
 }
 
+.icon{
+  display: none;
+}
+
 .hotel-title {
   margin-left: 2.6em;
 }
 
 .nav {
-  display: flex;
-  list-style-type: none;
-  justify-content:space-evenly;
   width: 400px;
   margin-right: 5em;
+}
+
+#links {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-evenly;
 }
 
 .nav li a {
@@ -28,6 +35,38 @@
 }
 
 .nav li a:hover {
-  color: aquamarine;
+    color: aquamarine;
 }
 
+
+@media (max-width: 850px) {
+  .hotel-title {
+    font-size: 1.4rem;
+    width: 20em;
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .nav {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 10px;
+  }
+
+  #links {
+    display: none;
+  }
+
+  .icon {
+    display: block;
+    width: 3em;
+    font-size: larger;
+  }
+
+}

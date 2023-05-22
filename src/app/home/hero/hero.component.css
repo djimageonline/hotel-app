@@ -27,3 +27,20 @@ p {
   color: white;
   text-shadow: 3px 3px 13px black;
 }
+
+@media (max-width: 850px) {
+  
+  h2 {
+    margin: 0;
+    font-size: 2.2rem;
+  }
+
+  .hero-txt {
+    width: 21em;
+    padding-top: 8em;
+    padding-left: 5em;
+    color: white;
+    text-shadow: 3px 3px 13px black;
+  }
+  
+  }
