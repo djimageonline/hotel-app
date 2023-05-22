@@ -18,20 +18,20 @@ export class HeaderComponent {
   handleMenuClick(event: Event): void {
     const target = event.target as HTMLElement; 
     console.log("icon clicked", target)
-    this.showNav()
+    // this.showNav()
   }
 
-  showNav() :void {
-    console.log("test nav")
-    const element = this.elementRef.nativeElement.querySelector('#links');
+  // showNav() :void {
+  //   console.log("test nav")
+  //   const element = this.elementRef.nativeElement.querySelector('#links');
 
-    if (this.isHamdisplayed) {
-      this.renderer.setStyle(element, 'display', 'none');
-    } else {
-      this.renderer.setStyle(element, 'display', 'block');
-    }
-    this.isHamdisplayed = !this.isHamdisplayed;
-  }
+  //   if (this.isHamdisplayed) {
+  //     this.renderer.setStyle(element, 'display', 'none');
+  //   } else {
+  //     this.renderer.setStyle(element, 'display', 'block');
+  //   }
+  //   this.isHamdisplayed = !this.isHamdisplayed;
+  // }
 
 
 }
