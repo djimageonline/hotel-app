@@ -47,7 +47,6 @@ button:hover {
 }
 
 
-
 /* Hotel cards */
 
 div .recommendation {
@@ -122,14 +121,17 @@ div .recommendation {
 }
 
 .price-book-btn {
-align-items: center;
-margin: 0;
-width: 80px;
+  align-items: center;
+  margin: 0;
+  width: 80px;
 }
 
 
 @media (max-width: 1100px) {
   
+  .main-content-container {
+    padding: 1em 1em;
+  }
 
 .hotel-card-container{
 
@@ -146,6 +148,11 @@ width: 80px;
   
   div .recommendation {
     font-size: 1.2rem;
+    margin-top: 10px;
+  }
+
+  div .hotel-benefit-title {
+    font-size: 2rem;
   }
 
   .hotel-card-container{
@@ -168,5 +175,17 @@ width: 80px;
   .hotel-benefit-section {
     margin-bottom: 5em;
   }
-  
+
+  button {
+  margin-top: 5px;  
   }
+  
+}
+
+@media (max-width: 375px) { 
+  div .recommendation {
+    font-size: 1rem;
+  }
+
+
+}
