@@ -17,9 +17,10 @@ export class HeaderComponent {
   @HostListener('document:click', ['$event'])
   handleMenuClick(event: Event): void {
     const target = event.target as HTMLElement; 
-    console.log("icon clicked", target)
-    // this.showNav()
   }
+
+  // Finish Navbar render when toggled
+  //-----------------------------------------
 
   // showNav() :void {
   //   console.log("test nav")

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 
   @Component({
@@ -8,6 +8,8 @@ import { Component } from '@angular/core';
   })
 
   export class DateRangePickerForms {
+
+    @Output() totalDays: number | undefined
     
     startDate: string = '';
     endDate: string = '';
@@ -25,9 +27,8 @@ import { Component } from '@angular/core';
       if (this.startDate && this.endDate) {
         const start = new Date(this.startDate);
         const end = new Date(this.endDate);
-        const totalDays = Math.floor((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
-        console.log('Number of days:', totalDays);
+         this.totalDays = Math.floor((end.getTime() - start.getTime()) / (1000 * 60 * 60 * 24));
+        console.log('Number of days:', this.totalDays);
       }
-    }
-    
+    }    
   }
